@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Görele Pide - Dijital QR Menü</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f9f6;
+        }
+        .active-tab {
+            background-color: #15803d;
+            color: white;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-green-600 selection:text-white">
+
+    <header class="bg-gradient-to-b from-green-900 to-green-800 text-white pb-24 pt-8 px-4 rounded-b-[2.5rem] shadow-lg relative">
+        <div class="max-w-md mx-auto text-center">
+            <div class="w-20 h-20 bg-white rounded-full mx-auto flex items-center justify-center shadow-md mb-3 border-2 border-red-500 animate-bounce">
+                <i class="fa-solid font-bold text-3xl text-green-700 fa-utensils"></i>
+            </div>
+            <h1 class="text-3xl font-bold tracking-tight">Görele Pide</h1>
+            <p class="text-green-200 text-xs mt-1 font-light"><i class="fa-solid fa-location-dot text-red-400 mr-1"></i> Osman Yılmaz, İlyas Uzuner Cd. No:15/A, Gebze/Kocaeli</p>
+            
+            <div class="mt-4 flex justify-center gap-3 text-xs">
+                <span class="bg-emerald-700/60 px-3 py-1 rounded-full border border-emerald-600"><i class="fa-solid fa-clock text-emerald-400 mr-1"></i> Hızlı Servis</span>
+                <span class="bg-emerald-700/60 px-3 py-1 rounded-full border border-emerald-600"><i class="fa-solid fa-heart text-red-400 mr-1"></i> Geleneksel Lezzet</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-md mx-auto px-4 -mt-16 mb-24">
+        
+        <div class="flex gap-2 overflow-x-auto pb-3 pt-2 scrollbar-none sticky top-0 bg-[#f7f9f6]/90 backdrop-blur-md z-50 my-2 px-1">
+            <a href="#pideler" class="active-tab shrink-0 px-4 py-2.5 rounded-2xl text-sm font-medium shadow-sm transition-all duration-200">Pide Çeşitleri</a>
+            <a href="#ozel-pideler" class="bg-white text-slate-700 shrink-0 px-4 py-2.5 rounded-2xl text-sm font-medium shadow-sm border border-slate-100">Özel Pideler</a>
+            <a href="#pizzalar" class="bg-white text-slate-700 shrink-0 px-4 py-2.5 rounded-2xl text-sm font-medium shadow-sm border border-slate-100">Pizzalar</a>
+            <a href="#lahmacun" class="bg-white text-slate-700 shrink-0 px-4 py-2.5 rounded-2xl text-sm font-medium shadow-sm border border-slate-100">Lahmacun & Ek</a>
+            <a href="#salatalar" class="bg-white text-slate-700 shrink-0 px-4 py-2.5 rounded-2xl text-sm font-medium shadow-sm border border-slate-100">Salatalar</a>
+            <a href="#tatlilar" class="bg-white text-slate-700 shrink-0 px-4 py-2.5 rounded-2xl text-sm font-medium shadow-sm border border-slate-100">Tatlılar</a>
+            <a href="#icecekler" class="bg-white text-slate-700 shrink-0 px-4 py-2.5 rounded-2xl text-sm font-medium shadow-sm border border-slate-100">İçecekler</a>
+            <a href="#cocuk" class="bg-white text-slate-700 shrink-0 px-4 py-2.5 rounded-2xl text-sm font-medium shadow-sm border border-slate-100">Çocuk Menüleri</a>
+        </div>
+
+        <!-- PİDELER -->
+        <section id="pideler" class="mt-6 scroll-mt-20">
+            <div class="flex items-center justify-between mb-4 border-b border-green-100 pb-2">
+                <h2 class="text-xl font-bold text-green-900 flex items-center gap-2">
+                    <span class="w-2 h-6 bg-green-700 rounded-full inline-block"></span>Pide Çeşitleri
+                </h2>
+            </div>
+            
+            <div class="grid gap-3">
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100/80 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/kasarli-pide.jpg" alt="Kaşarlı Pide" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-slate-800 text-sm">Kaşarlı Pide</h3>
+                        <p class="text-xs text-slate-400 mt-0.5 font-light">Eriyen enfes taze kaşar peyniriyle</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">310 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100/80 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/sebzeli-kasarli-pide.jpg" alt="Sebzeli Kaşarlı Pide" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-slate-800 text-sm">Sebzeli Kaşarlı Pide</h3>
+                        <p class="text-xs text-slate-400 mt-0.5 font-light">Mevsim sebzeleri ve taze kaşar peyniri</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">310 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100/80 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/acik-kiymali-pide.jpg" alt="Açık Kıymalı Pide" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-1.5"><h3 class="font-semibold text-slate-800 text-sm">Açık Kıymalı Pide</h3><span class="bg-red-50 text-[9px] text-red-600 px-1.5 py-0.5 rounded font-medium border border-red-100">Popüler</span></div>
+                        <p class="text-xs text-slate-400 mt-0.5 font-light">Geleneksel Karadeniz usulü kıymalı harç</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">340 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100/80 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/kasarli-sucuklu-pide.jpg" alt="Kaşarlı Sucuklu Pide" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-slate-800 text-sm">Kaşarlı Sucuklu Pide</h3>
+                        <p class="text-xs text-slate-400 mt-0.5 font-light">Yerli kasap sucuk ve bol kaşar peyniri</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">340 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100/80 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/karnaval-pide.jpg" alt="Karnaval Pide" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-slate-800 text-sm">Karnaval Pide</h3>
+                        <p class="text-xs text-red-600/80 mt-0.5 font-normal text-[11px] leading-tight">Salam, Sucuk, Sosis, Zeytin, Mısır, Kaşar</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">340 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100/80 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/kusbasili-kasarli-pide.jpg" alt="Kuşbaşılı Kaşarlı Pide" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-slate-800 text-sm">Kuşbaşılı Kaşarlı Pide</h3>
+                        <p class="text-xs text-slate-400 mt-0.5 font-light">Özel marine kuşbaşı et ve taze kaşar</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">380 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100/80 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/karisik-pide.jpg" alt="Karışık Pide" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-slate-800 text-sm">Karışık Pide</h3>
+                        <p class="text-xs text-red-600/80 mt-0.5 font-normal text-[11px] leading-tight">Kuşbaşı, Kıyma, Kaşar, Sucuk</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">380 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100/80 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/kusbasili-pide.jpg" alt="Kuşbaşılı Pide" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-slate-800 text-sm">Kuşbaşılı Pide</h3>
+                        <p class="text-xs text-slate-400 mt-0.5 font-light">Zırh bıçağı kıvamında lokum gibi kuşbaşı et</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">380 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100/80 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/kusbasili-kasarli-kavurmali.jpg" alt="Kuşbaşılı Kaşarlı Kavurmalı Pide" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-slate-800 text-sm">Kuşbaşılı Kaşarlı Kavurmalı</h3>
+                        <p class="text-xs text-slate-400 mt-0.5 font-light">Üç eşsiz lezzetin bir arada buluşması</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">425 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100/80 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/pastirmali-kasarli-pide.jpg" alt="Pastırmalı Kaşarlı Pide" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-slate-800 text-sm">Pastırmalı Kaşarlı Pide</h3>
+                        <p class="text-xs text-slate-400 mt-0.5 font-light">Kayseri pastırması ve kaliteli taze kaşar</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">480 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ÖZEL PİDELER -->
+        <section id="ozel-pideler" class="mt-8 scroll-mt-20">
+            <div class="flex items-center justify-between mb-4 border-b border-green-100 pb-2">
+                <h2 class="text-xl font-bold text-green-900 flex items-center gap-2">
+                    <span class="w-2 h-6 bg-red-500 rounded-full inline-block"></span>Görele Özel Pideler
+                </h2>
+                <span class="text-xs text-red-500 font-semibold bg-red-50 px-2 py-0.5 rounded-full border border-red-100">Şefin Seçimi</span>
+            </div>
+
+            <div class="grid gap-3">
+                <div class="bg-white p-3 rounded-2xl shadow-sm border-l-4 border-l-red-500 border-y border-r border-slate-100 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/gorele-kavurmali.jpg" alt="Görele Kavurmalı" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <h3 class="font-bold text-slate-800 text-sm">Görele Kavurmalı</h3>
+                        <p class="text-xs text-slate-400 mt-0.5 font-light">Özel Görele usulü tereyağlı ve bol kavurmalı</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">480 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/gorele-kiymali.jpg" alt="Görele Kıymalı" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <h3 class="font-bold text-slate-800 text-sm">Görele Kıymalı</h3>
+                        <p class="text-xs text-slate-400 mt-0.5 font-light">Hakiki Karadeniz kapalı kıymalı pidesi</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">380 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/atom-3lu.jpg" alt="Atom 3'lü" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <h3 class="font-bold text-slate-800 text-sm">Atom 3'lü</h3>
+                        <p class="text-xs text-red-600/80 mt-0.5 font-medium text-[11px]">Kıyma, Kavurma, Kaşar</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">480 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border-l-4 border-l-red-500 border-y border-r border-slate-100 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/atom-4lu.jpg" alt="Atom 4'lü" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <h3 class="font-bold text-slate-800 text-sm">Atom 4'lü</h3>
+                        <p class="text-xs text-red-600/80 mt-0.5 font-medium text-[11px]">Pastırma, Kıyma, Kavurma, Kaşar</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">480 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/kavurmali-sucuklu.jpg" alt="Kavurmalı Sucuklu" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <h3 class="font-bold text-slate-800 text-sm">Kavurmalı Sucuklu</h3>
+                        <p class="text-xs text-slate-400 mt-0.5 font-light">Özel dana kavurma ve sucuk şöleni</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">480 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/gorele-peynirlisi.jpg" alt="Görele Peynirlisi" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <h3 class="font-bold text-slate-800 text-sm">Görele Peynirlisi</h3>
+                        <p class="text-xs text-slate-400 mt-0.5 font-light">Özel Karadeniz peyniri ve bol köy tereyağı</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">380 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/pastirmali-karisik.jpg" alt="Pastırmalı Karışık" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <h3 class="font-bold text-slate-800 text-sm">Pastırmalı Karışık</h3>
+                        <p class="text-xs text-red-600/80 mt-0.5 font-medium text-[11px]">Pastırma, Kavurma, Sucuk, Kaşar</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">480 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/kavurmali-kasarli.jpg" alt="Kavurmalı Kaşarlı" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <h3 class="font-bold text-slate-800 text-sm">Kavurmalı Kaşarlı</h3>
+                        <p class="text-xs text-slate-400 mt-0.5 font-light">Karadeniz kavurması ile eriyen kaşarın uyumu</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">480 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/luks-karisik.jpg" alt="Lüks Karışık" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <h3 class="font-bold text-slate-800 text-sm">Lüks Karışık</h3>
+                        <p class="text-xs text-red-600/80 mt-0.5 font-medium text-[11px]">Pastırma, Kavurma, Kuşbaşı, Sucuk, Kıyma, Kaşar</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">480 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border-l-4 border-l-red-500 border-y border-r border-slate-100 flex gap-3 items-center hover:scale-[1.01] transition-transform">
+                    <img src="images/5i-bir-yerde.jpg" alt="5'i Bir Yerde" class="w-20 h-20 object-cover rounded-xl bg-slate-100">
+                    <div class="flex-1">
+                        <h3 class="font-bold text-slate-800 text-sm">5'i Bir Yerde</h3>
+                        <p class="text-xs text-red-600/80 mt-0.5 font-medium text-[11px]">Pastırma, Kavurma, Kuşbaşı, Sucuk, Kıyma, Kaşar</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-green-700 font-bold text-base">480 <span class="text-xs font-semibold">TL</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PİZZALAR -->
+        <section id="pizzalar" class="mt-8 scroll-mt-20">
+            <div class="flex items-center justify-between mb-4 border-b border-green-100 pb-2">
+                <h2 class="text-xl font-bold text-green-900 flex items-center gap-2">
+                    <span class="w-2 h-6 bg-green-700 rounded-full inline-block"></span>Pizza Çeşitleri
+                </h2>
+                <span class="text-xs text-slate-400 font-medium">Orta / Büyük</span>
+            </div>
+
+            <div class="grid gap-3">
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold text-slate-800 text-sm">Karışık Pizza</h3>
+                            <p class="text-[11px] text-slate-400 mt-1 font-light leading-tight">Mozerella peyniri, sucuk, salam, biber, sosis, zeytin, mısır, mantar</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mt-3 pt-3 border-t border-slate-50 justify-end">
+                        <div class="text-right"><span class="text-[10px] text-slate-400 block font-normal">Orta Boy</span><span class="text-green-700 font-bold text-sm">340 TL</span></div>
+                        <div class="text-right border-l pl-4 border-slate-100"><span class="text-[10px] text-slate-400 block font-normal">Büyük Boy</span><span class="text-green-700 font-bold text-sm">495 TL</span></div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold text-slate-800 text-sm">Ege Pizza</h3>
+                            <p class="text-[11px] text-slate-400 mt-1 font-light leading-tight">Mozerella peyniri, beyaz peynir, domates, biber, mısır, zeytin</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mt-3 pt-3 border-t border-slate-50 justify-end">
+                        <div class="text-right"><span class="text-[10px] text-slate-400 block font-normal">Orta Boy</span><span class="text-green-700 font-bold text-sm">340 TL</span></div>
+                        <div class="text-right border-l pl-4 border-slate-100"><span class="text-[10px] text-slate-400 block font-normal">Büyük Boy</span><span class="text-green-700 font-bold text-sm">495 TL</span></div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold text-slate-800 text-sm">Sebzeli Pizza</h3>
+                            <p class="text-[11px] text-slate-400 mt-1 font-light leading-tight">Mozerella peyniri, zeytin, mısır, biber, mantar, domates</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mt-3 pt-3 border-t border-slate-50 justify-end">
+                        <div class="text-right"><span class="text-[10px] text-slate-400 block font-normal">Orta Boy</span><span class="text-green-700 font-bold text-sm">340 TL</span></div>
+                        <div class="text-right border-l pl-4 border-slate-100"><span class="text-[10px] text-slate-400 block font-normal">Büyük Boy</span><span class="text-green-700 font-bold text-sm">495 TL</span></div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold text-slate-800 text-sm">Margarita Pizza</h3>
+                            <p class="text-[11px] text-slate-400 mt-1 font-light leading-tight">Mozerella peyniri, domates, fesleğen</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mt-3 pt-3 border-t border-slate-50 justify-end">
+                        <div class="text-right"><span class="text-[10px] text-slate-400 block font-normal">Orta Boy</span><span class="text-green-700 font-bold text-sm">340 TL</span></div>
+                        <div class="text-right border-l pl-4 border-slate-100"><span class="text-[10px] text-slate-400 block font-normal">Büyük Boy</span><span class="text-green-700 font-bold text-sm">495 TL</span></div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold text-slate-800 text-sm">Sucuklu Pizza</h3>
+                            <p class="text-[11px] text-slate-400 mt-1 font-light leading-tight">Mozerella peyniri, sucuk, zeytin, mısır</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mt-3 pt-3 border-t border-slate-50 justify-end">
+                        <div class="text-right"><span class="text-[10px] text-slate-400 block font-normal">Orta Boy</span><span class="text-green-700 font-bold text-sm">340 TL</span></div>
+                        <div class="text-right border-l pl-4 border-slate-100"><span class="text-[10px] text-slate-400 block font-normal">Büyük Boy</span><span class="text-green-700 font-bold text-sm">495 TL</span></div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold text-slate-800 text-sm">Mantarlı Pizza</h3>
+                            <p class="text-[11px] text-slate-400 mt-1 font-light leading-tight">Mozerella peyniri, mantar, biber</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mt-3 pt-3 border-t border-slate-50 justify-end">
+                        <div class="text-right"><span class="text-[10px] text-slate-400 block font-normal">Orta Boy</span><span class="text-green-700 font-bold text-sm">340 TL</span></div>
+                        <div class="text-right border-l pl-4 border-slate-100"><span class="text-[10px] text-slate-400 block font-normal">Büyük Boy</span><span class="text-green-700 font-bold text-sm">495 TL</span></div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-2xl shadow-sm border-l-4 border-l-red-400 border-y border-r border-slate-100">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm">Kavurmalı Pizza</h3>
+                            <p class="text-[11px] text-slate-400 mt-1 font-light leading-tight">Mozerella peyniri, dana kavurma</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mt-3 pt-3 border-t border-slate-50 justify-end">
+                        <div class="text-right"><span class="text-[10px] text-slate-400 block font-normal">Orta Boy</span><span class="text-green-700 font-bold text-sm">480 TL</span></div>
+                        <div class="text-right border-l pl-4 border-slate-100"><span class="text-[10px] text-slate-400 block font-normal">Büyük Boy</span><span class="text-green-700 font-bold text-sm">720 TL</span></div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-2xl shadow-sm border-l-4 border-l-red-400 border-y border-r border-slate-100">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm">Kavurmalı Sucuklu Pizza</h3>
+                            <p class="text-[11px] text-slate-400 mt-1 font-light leading-tight">Mozerella peyniri, dana kavurma, sucuk</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mt-3 pt-3 border-t border-slate-50 justify-end">
+                        <div class="text-right"><span class="text-[10px] text-slate-400 block font-normal">Orta Boy</span><span class="text-green-700 font-bold text-sm">480 TL</span></div>
+                        <div class="text-right border-l pl-4 border-slate-100"><span class="text-[10px] text-slate-400 block font-normal">Büyük Boy</span><span class="text-green-700 font-bold text-sm">720 TL</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LAHMACUN & EK -->
+        <section id="lahmacun" class="mt-8 scroll-mt-20">
+            <div class="flex items-center justify-between mb-4 border-b border-green-100 pb-2">
+                <h2 class="text-xl font-bold text-green-900 flex items-center gap-2">
+                    <span class="w-2 h-6 bg-green-700 rounded-full inline-block"></span>Lahmacun & Ek Ürünler
+                </h2>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 divide-y divide-slate-100">
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Lahmacun</span>
+                    <span class="text-green-700 font-bold text-sm">110 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Fındık Lahmacun</span>
+                    <span class="text-green-700 font-bold text-sm">60 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Kaşarlı Lahmacun</span>
+                    <span class="text-green-700 font-bold text-sm">135 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Peymacun</span>
+                    <span class="text-green-700 font-bold text-sm">135 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center bg-amber-50/40">
+                    <span class="font-semibold text-slate-800 text-sm flex items-center gap-2"><i class="fa-solid fa-bacon text-amber-500"></i> Patates Kızartması</span>
+                    <span class="text-green-700 font-bold text-sm">150 TL</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SALATALAR -->
+        <section id="salatalar" class="mt-8 scroll-mt-20">
+            <div class="flex items-center justify-between mb-4 border-b border-green-100 pb-2">
+                <h2 class="text-xl font-bold text-green-900 flex items-center gap-2">
+                    <span class="w-2 h-6 bg-green-500 rounded-full inline-block"></span>Salatalar
+                </h2>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 divide-y divide-slate-100">
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Çoban Salata</span>
+                    <span class="text-green-700 font-bold text-sm">150 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Mevsim Salata</span>
+                    <span class="text-green-700 font-bold text-sm">150 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Gavurdağı Salata</span>
+                    <span class="text-green-700 font-bold text-sm">200 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Peynirli Salata</span>
+                    <span class="text-green-700 font-bold text-sm">200 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Ton Balık Salata</span>
+                    <span class="text-green-700 font-bold text-sm">250 TL</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- TATLILAR -->
+        <section id="tatlilar" class="mt-8 scroll-mt-20">
+            <div class="flex items-center justify-between mb-4 border-b border-green-100 pb-2">
+                <h2 class="text-xl font-bold text-green-900 flex items-center gap-2">
+                    <span class="w-2 h-6 bg-pink-500 rounded-full inline-block"></span>Tatlılarımız
+                </h2>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 divide-y divide-slate-100">
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Fırın Sütlaç</span>
+                    <span class="text-green-700 font-bold text-sm">125 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Trileçe</span>
+                    <span class="text-green-700 font-bold text-sm">150 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Künefe</span>
+                    <span class="text-green-700 font-bold text-sm">180 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Katmer</span>
+                    <span class="text-green-700 font-bold text-sm">180 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Dondurmalı Katmer</span>
+                    <span class="text-green-700 font-bold text-sm">240 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Kesme Dondurma</span>
+                    <span class="text-green-700 font-bold text-sm">60 TL</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- İÇECEKLER -->
+        <section id="icecekler" class="mt-8 scroll-mt-20">
+            <div class="flex items-center justify-between mb-4 border-b border-green-100 pb-2">
+                <h2 class="text-xl font-bold text-green-900 flex items-center gap-2">
+                    <span class="w-2 h-6 bg-blue-500 rounded-full inline-block"></span>İçecekler
+                </h2>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 divide-y divide-slate-100">
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Kutu Kola</span>
+                    <span class="text-green-700 font-bold text-sm">85 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Portakallı İçecek</span>
+                    <span class="text-green-700 font-bold text-sm">85 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Kutu Gazoz</span>
+                    <span class="text-green-700 font-bold text-sm">85 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Ayran <span class="text-xs text-slate-400 font-light ml-1">275ml</span></span>
+                    <span class="text-green-700 font-bold text-sm">50 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Soğuk Çay</span>
+                    <span class="text-green-700 font-bold text-sm">85 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Kutu Meyve Suyu</span>
+                    <span class="text-green-700 font-bold text-sm">85 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Şalgam</span>
+                    <span class="text-green-700 font-bold text-sm">65 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Sade Soda</span>
+                    <span class="text-green-700 font-bold text-sm">50 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Limonlu Soda</span>
+                    <span class="text-green-700 font-bold text-sm">50 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm">Su</span>
+                    <span class="text-green-700 font-bold text-sm">20 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm"><i class="fa-solid fa-mug-hot text-amber-800 mr-1"></i> Türk Kahvesi</span>
+                    <span class="text-green-700 font-bold text-sm">100 TL</span>
+                </div>
+                <div class="p-3.5 flex justify-between items-center">
+                    <span class="font-medium text-slate-800 text-sm"><i class="fa-solid fa-mug-saucer text-red-600 mr-1"></i> Çay</span>
+                    <span class="text-green-700 font-bold text-sm">25 TL</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ÇOCUK MENÜLERİ -->
+        <section id="cocuk" class="mt-8 scroll-mt-20">
+            <div class="flex items-center justify-between mb-4 border-b border-green-100 pb-2">
+                <h2 class="text-xl font-bold text-green-900 flex items-center gap-2">
+                    <span class="w-2 h-6 bg-red-500 rounded-full inline-block"></span>Çocuk Menüleri
+                </h2>
+                <i class="fa-solid fa-child text-red-400 text-lg"></i>
+            </div>
+
+            <div class="grid gap-4">
+                <div class="bg-white p-4 rounded-2xl shadow-sm border-2 border-dashed border-red-200 relative overflow-hidden">
+                    <div class="absolute -right-6 -top-6 w-14 h-14 bg-red-500 rotate-45 flex items-end justify-center pb-1 text-white text-[9px] font-bold">MİNİ</div>
+                    <h3 class="font-bold text-slate-800 text-sm flex items-center gap-1.5"><i class="fa-solid fa-pizza-slice text-red-400 text-xs"></i> Pide Menü</h3>
+                    <p class="text-xs text-slate-500 mt-1 leading-relaxed">Mini pide, patates kızartması, ayran, sürpriz yumurta</p>
+                    <div class="mt-3 flex justify-between items-center">
+                        <span class="text-xs bg-red-50 text-red-600 px-2 py-0.5 rounded-full font-medium">Sürpriz Hediyeli!</span>
+                        <span class="text-green-700 font-bold text-base">295 TL</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-2xl shadow-sm border-2 border-dashed border-red-200 relative overflow-hidden">
+                    <div class="absolute -right-6 -top-6 w-14 h-14 bg-red-500 rotate-45 flex items-end justify-center pb-1 text-white text-[9px] font-bold">MİNİ</div>
+                    <h3 class="font-bold text-slate-800 text-sm flex items-center gap-1.5"><i class="fa-solid fa-circle-dot text-red-400 text-xs"></i> Pizza Menü</h3>
+                    <p class="text-xs text-slate-500 mt-1 leading-relaxed">Mini pizza, patates kızartması, ayran, sürpriz yumurta</p>
+                    <div class="mt-3 flex justify-between items-center">
+                        <span class="text-xs bg-red-50 text-red-600 px-2 py-0.5 rounded-full font-medium">Sürpriz Hediyeli!</span>
+                        <span class="text-green-700 font-bold text-base">295 TL</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-2xl shadow-sm border-2 border-dashed border-red-200 relative overflow-hidden">
+                    <div class="absolute -right-6 -top-6 w-14 h-14 bg-red-500 rotate-45 flex items-end justify-center pb-1 text-white text-[9px] font-bold">MİNİ</div>
+                    <h3 class="font-bold text-slate-800 text-sm flex items-center gap-1.5"><i class="fa-solid fa-scroll text-red-400 text-xs"></i> Lahmacun Menü</h3>
+                    <p class="text-xs text-slate-500 mt-1 leading-relaxed">2 fındık lahmacun, patates kızartması, yeşillik, ayran, sürpriz yumurta</p>
+                    <div class="mt-3 flex justify-between items-center">
+                        <span class="text-xs bg-red-50 text-red-600 px-2 py-0.5 rounded-full font-medium">Sürpriz Hediyeli!</span>
+                        <span class="text-green-700 font-bold text-base">295 TL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-100 py-6 text-center text-xs text-slate-400 mt-12 mb-4">
+        <p class="font-medium text-slate-600">© 2026 Görele Pide Gebze</p>
+        <p class="mt-1">Afiyet Olsun!</p>
+    </footer>
+
+    <script>
+        const tabs = document.querySelectorAll('main div.flex a');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                tabs.forEach(t => t.className = "bg-white text-slate-700 shrink-0 px-4 py-2.5 rounded-2xl text-sm font-medium shadow-sm border border-slate-100");
+                this.className = "active-tab shrink-0 px-4 py-2.5 rounded-2xl text-sm font-medium shadow-sm transition-all duration-200";
+            });
+        });
+    </script>
+</body>
+</html>

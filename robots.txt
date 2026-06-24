@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Google Görseller için resim klasörüne erişim izni (Görsel SEO için önemli)
+User-agent: Googlebot-Image
+Allow: /images/
+
+Sitemap: https://gebzegorelepide.com.tr/sitemap.xml
