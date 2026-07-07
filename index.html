@@ -17,34 +17,6 @@
     <meta property="og:url" content="https://gebzegorelepide.com.tr">
     <meta property="og:type" content="restaurant.menu">
 
-    <!-- Schema.org Yapısal Veri (Local SEO için hayati önem taşır) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "name": "Görele Pide",
-      "image": "https://gebzegorelepide.com.tr/images/gorele-kavurmali.jpg",
-      "@id": "https://gebzegorelepide.com.tr",
-      "url": "https://gebzegorelepide.com.tr",
-      "telephone": "(0262) 641 26 28",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Osman Yılmaz, İlyas Uzuner Cd. No:15/A",
-        "addressLocality": "Gebze",
-        "addressRegion": "Kocaeli",
-        "postalCode": "41400",
-        "addressCountry": "TR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 40.7990,
-        "longitude": 29.4310
-      },
-      "servesCuisine": "Karadeniz Pidesi, Türk Mutfağı",
-      "priceRange": "$$"
-    }
-    </script>
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -88,20 +60,32 @@
             </a>
 
             <!-- Sağ Menü & Hızlı Butonlar -->
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-2 md:gap-3">
                 <a href="qr.html" class="hidden md:flex items-center gap-2 font-medium text-slate-600 hover:text-green-700 px-3 py-2 transition-colors">
                     <i class="fa-solid fa-book-open"></i> Menüyü İncele
                 </a>
-                <a href="https://wa.me/902626412628" class="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600 hover:bg-green-500 hover:text-white transition-colors shadow-sm text-xl" title="WhatsApp'tan Yaz">
+                <!-- Instagram Butonu -->
+                <a href="https://instagram.com" class="w-10 h-10 flex items-center justify-center rounded-full bg-pink-50 text-pink-600 hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 hover:text-white transition-all shadow-sm text-xl" title="Instagram Profilimiz">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <!-- WhatsApp Butonu -->
+                <a href="https://wa.me/905466842628" class="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600 hover:bg-green-500 hover:text-white transition-colors shadow-sm text-xl" title="WhatsApp'tan Yaz">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
-                <!-- ANA HEDEF BUTONU -->
-                <a href="tel:(0262) 641 26 28" class="bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-red-600/30 transition-all hover:scale-105 flex items-center gap-2 animate-pulse">
-                    <i class="fa-solid fa-phone-volume"></i> <span>Hemen Ara</span>
+                <!-- Hemen Ara Butonu -->
+                <a href="tel:+905466842628" class="bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-red-600/30 transition-all hover:scale-105 flex items-center gap-2 animate-pulse">
+                    <i class="fa-solid fa-phone-volume"></i> <span class="hidden sm:inline">Hemen Ara</span>
                 </a>
             </div>
         </div>
     </nav>
+
+    <!-- KAMPANYA ALANI -->
+    <div class="w-full bg-red-600">
+        <a href="#firsatlar">
+            <img src="images/kampanya.jpg" alt="Güncel Kampanya Fırsatı" class="w-full h-auto max-h-[300px] object-cover md:object-contain bg-red-600">
+        </a>
+    </div>
 
     <!-- Hero Bölümü (Ana Dikkat Çekici Alan) -->
     <header class="hero-bg text-white py-16 md:py-24 px-4 text-center border-b-[6px] border-red-500">
@@ -111,8 +95,8 @@
             <p class="text-green-100 text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto">Odun ateşinde, Trabzon tereyağı ve özel Görele peyniriyle hazırlanan, zırh kıymasıyla taçlanan meşhur lezzetler.</p>
             
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="tel:(0262) 641 26 28" class="w-full sm:w-auto bg-white text-green-800 hover:bg-green-50 px-8 py-4 rounded-full font-bold text-lg shadow-xl transition-transform hover:-translate-y-1 flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-phone text-red-500 text-xl"></i> +9(0262) 641 26 28
+                <a href="tel:+905466842628" class="w-full sm:w-auto bg-white text-green-800 hover:bg-green-50 px-8 py-4 rounded-full font-bold text-lg shadow-xl transition-transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-phone text-red-500 text-xl"></i> 0546 684 26 28
                 </a>
                 <a href="qr.html" class="w-full sm:w-auto bg-transparent border-2 border-white/80 hover:bg-white/10 text-white px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2">
                     <i class="fa-solid fa-qrcode"></i> Dijital Menü
@@ -132,11 +116,11 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Pide 1 -->
             <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 hover:shadow-xl transition-shadow group flex flex-col">
-                <div class="h-64 overflow-hidden relative">
+                <div class="h-56 relative bg-slate-50 flex items-center justify-center p-4">
                     <div class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1.5 rounded-full z-10 shadow-md">Çok Satan</div>
-                    <img src="images/gorele-kavurmali.jpg" alt="Görele Kavurmalı Pide" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="images/gorele-kavurmali.jpg" alt="Görele Kavurmalı Pide" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
                 </div>
-                <div class="p-6 flex flex-col flex-grow">
+                <div class="p-6 flex flex-col flex-grow border-t border-slate-100">
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="text-xl font-bold text-slate-800 group-hover:text-green-700 transition-colors">Görele Kavurmalı</h3>
                         <span class="text-green-700 font-extrabold text-xl shrink-0">480 TL</span>
@@ -148,10 +132,10 @@
             <!-- Pide 2 -->
             <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 hover:shadow-xl transition-shadow group flex flex-col relative transform md:-translate-y-4">
                 <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-green-700 text-white text-xs font-bold px-4 py-2 rounded-full z-20 shadow-lg border-2 border-white"><i class="fa-solid fa-star text-yellow-300 mr-1"></i> Özel Tavsiye</div>
-                <div class="h-64 overflow-hidden relative">
-                    <img src="images/kusbasili-pide.jpg" alt="Kuşbaşılı Pide" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="h-56 relative bg-slate-50 flex items-center justify-center p-4">
+                    <img src="images/kusbasili-pide.jpg" alt="Kuşbaşılı Pide" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
                 </div>
-                <div class="p-6 flex flex-col flex-grow bg-green-50/30">
+                <div class="p-6 flex flex-col flex-grow bg-green-50/30 border-t border-green-100/50">
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="text-xl font-bold text-slate-800 group-hover:text-green-700 transition-colors">Kuşbaşılı Pide</h3>
                         <span class="text-green-700 font-extrabold text-xl shrink-0">380 TL</span>
@@ -162,10 +146,10 @@
 
             <!-- Pide 3 -->
             <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 hover:shadow-xl transition-shadow group flex flex-col">
-                <div class="h-64 overflow-hidden relative">
-                    <img src="images/atom-4lu.jpg" alt="Atom 4'lü Pide" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="h-56 relative bg-slate-50 flex items-center justify-center p-4">
+                    <img src="images/atom-4lu.jpg" alt="Atom 4'lü Pide" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
                 </div>
-                <div class="p-6 flex flex-col flex-grow">
+                <div class="p-6 flex flex-col flex-grow border-t border-slate-100">
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="text-xl font-bold text-slate-800 group-hover:text-green-700 transition-colors">Atom 4'lü Pide</h3>
                         <span class="text-green-700 font-extrabold text-xl shrink-0">480 TL</span>
@@ -234,11 +218,11 @@
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fa-solid fa-phone text-green-500 w-5"></i>
-                            <a href="tel:(0262) 641 26 28" class="text-white font-semibold hover:text-green-400 transition-colors">(0262) 641 26 28</a>
+                            <a href="tel:+905466842628" class="text-white font-semibold hover:text-green-400 transition-colors">0546 684 26 28</a>
                         </li>
                         <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-envelope text-slate-400 w-5"></i>
-                            <a href="mailto:info@gebzegorelepide.com.tr" class="text-sm hover:text-white transition-colors">info@gebzegorelepide.com.tr</a>
+                            <i class="fa-brands fa-whatsapp text-green-500 w-5 text-lg"></i>
+                            <a href="https://wa.me/905466842628" class="text-white font-semibold hover:text-green-400 transition-colors">WhatsApp Hattı</a>
                         </li>
                     </ul>
                 </div>
@@ -248,7 +232,7 @@
                     <h4 class="text-lg font-semibold text-white mb-4 border-b border-slate-700 pb-2 inline-block">Çalışma Saatleri</h4>
                     <ul class="space-y-2 text-sm">
                         <li class="flex justify-between border-b border-slate-800 pb-2"><span>Pazartesi - Cuma</span> <span class="font-medium text-white">10:00 - 22:00</span></li>
-                        <li class="flex justify-between border-b border-slate-800 pb-2"><span>Cumartesi</span> <span class="font-medium text-white">10:00 - 22:00</span></li>
+                        <li class="flex justify-between border-b border-slate-800 pb-2"><span>Cumartesi</span> <span class="font-medium text-white">10:00 - 23:00</span></li>
                         <li class="flex justify-between pt-1"><span>Pazar</span> <span class="font-medium text-white">10:00 - 22:00</span></li>
                     </ul>
                 </div>
