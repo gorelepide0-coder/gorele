@@ -13,9 +13,37 @@
     
     <!-- Open Graph (Sosyal Medya Paylaşım Etiketleri) -->
     <meta property="og:title" content="Görele Pide Gebze | Hakiki Karadeniz Pidesi">
-    <meta property="og:description" content="Gebze'de meşhur Görele pidesinin tek adresi. Menümüzü inceleyin ve hemen arayın!">
+    <meta property="og:description" content="Gebze'de meşhur Görele pidesinin adresi. Menümüzü inceleyin ve hemen arayın!">
     <meta property="og:url" content="https://gebzegorelepide.com.tr">
     <meta property="og:type" content="restaurant.menu">
+
+    <!-- Schema.org Yapısal Veri (Local SEO için hayati önem taşır) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Görele Pide",
+      "image": "https://gebzegorelepide.com.tr/images/logo.png",
+      "@id": "https://gebzegorelepide.com.tr",
+      "url": "https://gebzegorelepide.com.tr",
+      "telephone": "+905466842628",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Osman Yılmaz, İlyas Uzuner Cd. No:15/A",
+        "addressLocality": "Gebze",
+        "addressRegion": "Kocaeli",
+        "postalCode": "41400",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.7990,
+        "longitude": 29.4310
+      },
+      "servesCuisine": "Karadeniz Pidesi, Türk Mutfağı",
+      "priceRange": "$$"
+    }
+    </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -37,7 +65,7 @@
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-4">
                 <span><i class="fa-solid fa-location-dot text-red-400 mr-1"></i> Osman Yılmaz Mah. İlyas Uzuner Cd. No:15/A, Gebze</span>
-                <span><i class="fa-regular fa-clock text-emerald-400 mr-1"></i> Her Gün: 10:00 - 22:00</span>
+                <span><i class="fa-regular fa-clock text-emerald-400 mr-1"></i> Her Gün: 08:00 - 22:00</span>
             </div>
             <div class="flex items-center gap-3">
                 <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-instagram text-base"></i></a>
@@ -49,10 +77,10 @@
     <!-- Navigasyon -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-2 group">
-                <div class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center shadow-md group-hover:bg-green-600 transition-colors">
-                    <i class="fa-solid fa-utensils text-white text-lg"></i>
-                </div>
+            <a href="index.html" class="flex items-center gap-3 group">
+                <!-- LOGO ALANI -->
+                <img src="images/logo.png" alt="Görele Pide Logo" class="w-12 h-12 md:w-14 md:h-14 object-contain">
+                
                 <div class="leading-tight">
                     <h1 class="text-xl font-bold text-green-800 tracking-tight">Görele Pide</h1>
                     <span class="text-[10px] font-semibold text-red-500 tracking-widest uppercase">Gebze</span>
@@ -84,8 +112,10 @@
     <header class="hero-bg text-white py-16 md:py-24 px-4 text-center border-b-[6px] border-red-500">
         <div class="max-w-4xl mx-auto">
             <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">100% Yöresel Lezzet</span>
-            <h2 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Gebze'de Hakiki Karadeniz <br class="hidden md:block"> Pidesinin Tek Adresi</h2>
-            <p class="text-green-100 text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto">Odun ateşinde, Trabzon tereyağı ve özel Görele peyniriyle hazırlanan, zırh kıymasıyla taçlanan meşhur lezzetler.</p>
+            <!-- BAŞLIK DÜZENLENDİ (Tek kelimesi silindi) -->
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Gebze'de Hakiki Karadeniz <br class="hidden md:block"> Pidesinin Adresi</h2>
+            <!-- AÇIKLAMA DÜZENLENDİ -->
+            <p class="text-green-100 text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto">Odun ateşinde, nefis tereyağı ve taze peyniriyle hazırlanan, zırh kıymasıyla taçlanan meşhur lezzetler.</p>
             
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="tel:+905466842628" class="w-full sm:w-auto bg-white text-green-800 hover:bg-green-50 px-8 py-4 rounded-full font-bold text-lg shadow-xl transition-transform hover:-translate-y-1 flex items-center justify-center gap-3">
@@ -98,11 +128,10 @@
         </div>
     </header>
 
-    <!-- KAMPANYA ALANI (Şefin İmza Pideleri Yerine) -->
+    <!-- KAMPANYA ALANI -->
     <section class="max-w-6xl mx-auto px-4 py-16">
         <div class="w-full rounded-3xl overflow-hidden shadow-xl border-4 border-white">
             <a href="qr.html">
-                <!-- w-full h-auto sınıfı resmin kendi orijinal oranında tam sığmasını ve esnememesini sağlar -->
                 <img src="images/kampanya.jpg" alt="Güncel Kampanya Fırsatı" class="w-full h-auto block">
             </a>
         </div>
@@ -149,6 +178,7 @@
                 <!-- Marka -->
                 <div>
                     <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                        <!-- LOGO YEDEĞİ OLARAK İKON, DİLERSEN BURAYA DA EKLENEBİLİR -->
                         <i class="fa-solid fa-utensils text-green-500"></i> Görele Pide
                     </h3>
                     <p class="text-sm text-slate-400 mb-6 leading-relaxed">
@@ -179,9 +209,8 @@
                 <div>
                     <h4 class="text-lg font-semibold text-white mb-4 border-b border-slate-700 pb-2 inline-block">Çalışma Saatleri</h4>
                     <ul class="space-y-2 text-sm">
-                        <li class="flex justify-between border-b border-slate-800 pb-2"><span>Pazartesi - Cuma</span> <span class="font-medium text-white">10:00 - 22:00</span></li>
-                        <li class="flex justify-between border-b border-slate-800 pb-2"><span>Cumartesi</span> <span class="font-medium text-white">10:00 - 23:00</span></li>
-                        <li class="flex justify-between pt-1"><span>Pazar</span> <span class="font-medium text-white">10:00 - 22:00</span></li>
+                        <!-- SAATLER DÜZENLENDİ -->
+                        <li class="flex justify-between pt-1"><span>Haftanın Her Günü</span> <span class="font-medium text-white">08:00 - 22:00</span></li>
                     </ul>
                 </div>
             </div>
